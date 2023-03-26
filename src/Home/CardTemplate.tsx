@@ -1,4 +1,5 @@
 import { 
+    Button,
     Card,
     CardBody,
     CardFooter,
@@ -34,7 +35,7 @@ const CardTemplate = (props: CardTemplateProps) => {
                 </Paragraph>
             </CardBody>
             <CardFooter pad="medium" background="background-contrast">
-                { footer }
+8               <Button label={footer} onClick={() => {}} {...props} />
             </CardFooter>
         </Card>
     )
