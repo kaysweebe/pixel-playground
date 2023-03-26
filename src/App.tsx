@@ -1,24 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import {
+    Box,
+    Button,
+    Grid,
+    Grommet,
+    grommet,
+    Header,
+    Page,
+    PageContent,
+    PageHeader,
+    Text,
+} from "grommet";
+import { deepMerge } from "grommet/utils";
+import { Moon, Sun } from "grommet-icons";
+import AppBar from "./Home/AppBar";
+import CardTemplate from './Home/CardTemplate';
+import HomePage from './Home/HomePage';
+
+
+const theme = deepMerge(grommet, {
+  global: {
+   colors: {
+       brand: '#228BE6',
+     },
+    font: {
+      family: "Roboto",
+      size: "18px",
+      height: "20px",
+    },
+  },
+});
 
 function App() {
+  const [dark, setDark] = useState(false);
+
+  const handleClick = () => {
+    setDark(!dark)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grommet theme={theme} full themeMode={dark ? "dark" : "light"}>
+       <Page>
+          <AppBar dark={dark} onClick={() => handleClick()}/>
+        <HomePage />
+      </Page>
+      </Grommet>
     </div>
   );
 }
