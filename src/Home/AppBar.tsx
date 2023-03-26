@@ -25,7 +25,7 @@ const AppBar = (props: AppBarProps) => {
 
     return (
     <AppBarTheme>
-    <Text size="large">Game Time!</Text>
+    <Text size="large">Pixel Playland</Text>
     <Button
       a11yTitle={dark ? "Switch to light mode" : "Switch to dark mode"}
       icon={dark ? <Moon /> : <Sun />}

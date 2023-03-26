@@ -21,7 +21,7 @@ import HomePage from './Home/HomePage';
 const theme = deepMerge(grommet, {
   global: {
    colors: {
-       brand: '#228BE6',
+       brand: '#32cd32',
      },
     font: {
       family: "Roboto",
