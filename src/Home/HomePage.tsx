@@ -35,7 +35,7 @@ const HomePage = () => {
 
     return (
         <PageContent>
-        <PageHeader title="Welcome to Pixel Playland!" />
+        <PageHeader title="Welcome to Pixel Playground!" />
         <Grid columns="medium" gap="large" pad={{ bottom: "large"}}>
           {
             content.map((c) => 

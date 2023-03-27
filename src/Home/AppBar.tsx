@@ -27,7 +27,7 @@ const AppBar = (props: AppBarProps) => {
     return (
     <AppBarTheme>
           <Button href="/">
-            <Text size="large">Pixel Playland</Text>
+            <Text size="large">Pixel Playground</Text>
           </Button>
       <Button
         a11yTitle={dark ? "Switch to light mode" : "Switch to dark mode"}
