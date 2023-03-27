@@ -3,7 +3,7 @@ A couch-based way to play games with your friends
 
 ## Games
 ### Tic-Tac-Toe Hound
-![alt text](https://github.com/kaysweebe/pixel-playground/src/assets/images/hound-2.png?raw=true)
+![alt text](https://github.com/kaysweebe/pixel-playground/blob/main/src/assets/images/hound-2.png?raw=true?raw=true)
 
 ## Installation
 1. Clone repo
