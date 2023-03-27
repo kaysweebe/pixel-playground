@@ -1,6 +1,10 @@
 # Pixel Playground
 A couch-based way to play games with your friends
 
+## Games
+### Tic-Tac-Toe Hound
+![alt text](https://github.com/kaysweebe/pixel-playground/src/assets/images/hound-2.png?raw=true)
+
 ## Installation
 1. Clone repo
 2. Run `npm install` to install packages
