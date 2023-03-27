@@ -1,0 +1,25 @@
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+.square {
+    height: 100px;
+    width: 125px;
+}
+
+/* .hound {
+    height: 100px;
+    width: 100px;
+} */

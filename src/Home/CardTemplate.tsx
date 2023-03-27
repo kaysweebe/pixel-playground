@@ -12,13 +12,14 @@ import { useContext } from "react"
 
 interface CardTemplateProps {
     title: string,
+    link: string,
     subtitle: string,
     paragraph: string,
     footer: string,
 }
 
 const CardTemplate = (props: CardTemplateProps) => {
-    const {title, subtitle, paragraph, footer} = props
+    const {title, link, subtitle, paragraph, footer} = props
     const size = useContext(ResponsiveContext);
 
     return (
@@ -35,7 +36,7 @@ const CardTemplate = (props: CardTemplateProps) => {
                 </Paragraph>
             </CardBody>
             <CardFooter pad="medium" background="background-contrast">
-8               <Button label={footer} onClick={() => {}} {...props} />
+8               <Button href={link} label={footer} onClick={() => {}} {...props} />
             </CardFooter>
         </Card>
     )

@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {
-    Box,
-    Button,
-    Grid,
     Grommet,
     grommet,
-    Header,
     Page,
-    PageContent,
-    PageHeader,
-    Text,
 } from "grommet";
 import { deepMerge } from "grommet/utils";
-import { Moon, Sun } from "grommet-icons";
 import AppBar from "./Home/AppBar";
-import CardTemplate from './Home/CardTemplate';
 import HomePage from './Home/HomePage';
+import TicTacToeHound from './TicTacToeHound/TicTacToeHound';
 
 
 const theme = deepMerge(grommet, {
@@ -42,7 +35,12 @@ function App() {
       <Grommet theme={theme} full themeMode={dark ? "dark" : "light"}>
        <Page>
           <AppBar dark={dark} onClick={() => handleClick()}/>
-        <HomePage />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/tic-tac-toe-hound" element={<TicTacToeHound />} />
+            </Routes>
+          </BrowserRouter>
       </Page>
       </Grommet>
     </div>
