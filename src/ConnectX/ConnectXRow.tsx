@@ -4,13 +4,13 @@ import './connect-x-styles.css'
 interface CellProps {
     value: any,
     columnIndex: number,
-    play: undefined
+    play: any
 }
 
 const Cell = (props: CellProps) => {
     const { value, columnIndex, play } = props
-    let color = 'whiteCircle'
 
+    let color = 'whiteCircle'
     switch(value) {
         case 1: 
             color = 'redCircle'
@@ -23,12 +23,18 @@ const Cell = (props: CellProps) => {
     }
 
     return (
-        <TableCell className="gameCell" border={{
-            color: "#0e6126",
-            size: "medium",
-            style: "dashed",
-            side: "all",
-          }}  >
+        <TableCell 
+            className="gameCell" 
+            border={{
+                color: "#0e6126",
+                size: "medium",
+                style: "dashed",
+                side: "all",
+            }}
+            onClick={() => {
+                play(columnIndex)
+            }}
+        >
             <div className={color}></div>
         </TableCell>
     )
