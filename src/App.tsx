@@ -6,9 +6,10 @@ import {
     Page,
 } from "grommet";
 import { deepMerge } from "grommet/utils";
-import AppBar from "./Home/AppBar";
+import AppBar from './Home/AppBar';
 import HomePage from './Home/HomePage';
 import TicTacToeHound from './TicTacToeHound/TicTacToeHound';
+import ConnectX from './ConnectX/ConnectX';
 
 
 const theme = deepMerge(grommet, {
@@ -39,6 +40,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/tic-tac-toe-hound" element={<TicTacToeHound />} />
+              <Route path="/connect-x" element={<ConnectX />} />
             </Routes>
           </BrowserRouter>
       </Page>

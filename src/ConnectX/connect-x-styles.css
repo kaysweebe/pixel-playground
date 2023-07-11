@@ -1,0 +1,28 @@
+.gameCell {
+    height: 50px;
+    background-color: #f2def9;
+    cursor: pointer;
+    align-items: center;
+}
+
+.whiteCircle,
+.redCircle,
+.yellowCircle {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.whiteCircle {
+    background-color: white;
+}
+
+.redCircle {
+    background-color: brown;
+    transition: background-color 0.5s;
+}
+
+.yellowCircle {
+    background-color: yellowgreen;
+    transition: background-color 0.5s;
+}
